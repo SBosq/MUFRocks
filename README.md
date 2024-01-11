@@ -1,6 +1,6 @@
 # MUFRocks
 
-This project focuses on providing automatic classification of satellite images of felsic, mafic, and ultramafic rocks from La Palmira and La Victoria, Colombia. This project uses two types of satellite images hand picked from the Earth Observation System (EOS). Namely, natural color (bands B04, B03, B02) and the infrared color vegetation (B08, B04, B03). The **Machine Learning algorithms** that were used in this study where the following: **Random Forest, K-Nearest Neighbors, Support Vector Machines, Logistic Regression, and Multilayer Perceptron**. Our results are as follows, the model generated with **K-Nearest Neighbors** performed best for **classifying natural color images**, with an **accuracy of 91%**, a **precision of 87%**, and a **recall of 88%**. **Random Forest** was the best model for **classifying infrared images** with an overall **accuracy of 83%**, a **precision of 31%**, and a **recall of 31%**.
+This project focuses on providing automatic classification of satellite images of felsic, mafic, and ultramafic rocks from La Palmira and La Victoria, Colombia. This project uses two types of satellite images hand picked from the Earth Observation System (EOS). Namely, natural color (bands B04, B03, B02) and the infrared color vegetation (B08, B04, B03). The ==Machine Learning algorithms== that were used in this study where the following: ==Random Forest, K-Nearest Neighbors, Support Vector Machines, Logistic Regression, and Multilayer Perceptron==. Our results are as follows, the model generated with ==K-Nearest Neighbors== performed best for ==classifying natural color images==, with an ==accuracy of 91%==, a ==precision of 87%==, and a ==recall of 88%==. ==Random Forest== was the best model for ==classifying infrared images== with an overall ==accuracy of 83%==, a ==precision of 31%==, and a ==recall of 31%==.
 ---
 Files found within the OSGDAL folder belong to the _Natural Color_ satellite bands, and are similar to the files found within the LLU_Colombia folder. The only exception being that the latter folder contains the clipped _Infrared Color Vegetation_ satellite bands and a python file called Rock_data.py. This is the same file as the one found in the OSGDAL folder except with a name change, truth_data.py.
 ---
@@ -10,7 +10,7 @@ As far as the ImagesUsed and InitialImages folders are concerned, InitialImages 
 ---
 Finally, the neighbortest folder contains all the relevant Machine Learning algorithms used in this study identified by their initials. As well as the train and test csv files that were generated from the extracted and provided data.
 ---
-
 TLDR: 
 - Learn/understand different technologies in order to analyze satellite images and their data
 - Create a Python code to analyze satellite images and use Machine Learning to extract, train, and load all relevant information
+---
