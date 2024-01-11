@@ -10,7 +10,7 @@
 <hr>
 <p> Finally, the neighbortest folder contains all the relevant Machine Learning algorithms used in this study identified by their initials. As well as the train and test csv files that were generated from the extracted and provided data. </p>
 <hr>
-<p> TLDR: 
-* Learn/understand different technologies in order to analyze satellite images and their data
+<p> TLDR: <br>
+* Learn/understand different technologies in order to analyze satellite images and their data <br>
 * Create a Python code to analyze satellite images and use Machine Learning to extract, train, and load all relevant information </p>
 <hr>
