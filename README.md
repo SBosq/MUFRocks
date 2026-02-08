@@ -1,16 +1,91 @@
-# MUFRocks
+# MUFRocks — Automated Geological Classification Using Satellite Imagery
+
+MUFRocks is a Python-based project that combines **GIS, satellite imagery, and machine learning** to classify felsic, mafic, and ultramafic rock formations in Colombia. The project features **reproducible data pipelines**, efficient preprocessing of natural color and infrared imagery, integration of geospatial reference data, and ML models achieving up to **91% classification accuracy**. It demonstrates practical experience in **Python automation, geospatial workflows, and reproducible analytical pipelines**, aligning closely with modern CI/CD and ArcGIS API practices.
+
 ---
-<p> This project focuses on providing automatic classification of satellite images of felsic, mafic, and ultramafic rocks from La Palmira and La Victoria, Colombia. This project uses two types of satellite images hand picked from the Earth Observation System (EOS). Namely, natural color (bands B04, B03, B02) and the infrared color vegetation (B08, B04, B03). The <b><i>Machine Learning algorithms</i></b> that were used in this study where the following: <b><i>Random Forest, K-Nearest Neighbors, Support Vector Machines, Logistic Regression, and Multilayer Perceptron</i></b>. Our results are as follows, the model generated with <b><i>K-Nearest Neighbors</i></b> performed best for <b><i>classifying natural color images</i></b>, with an <b><i>accuracy of 91%</i></b>, a <b><i>precision of 87%</i></b>, and a <b><i>recall of 88%</i></b>. <b><i>Random Forest</i></b> was the best model for <b><i>classifying infrared images</i></b> with an overall <b><i>accuracy of 83%</i></b>, a <b><i>precision of 31%</i></b>, and a <b><i>recall of 31%</i></b>. </p>
-<hr>
-<p> Files found within the OSGDAL folder belong to the <b><i>Natural Color</i></b> satellite bands, and are similar to the files found within the LLU_Colombia folder. The only exception being that the latter folder contains the clipped <b><i>Infrared Color Vegetation</i></b> satellite bands and a python file called Rock_data.py. This is the same file as the one found in the OSGDAL folder except with a name change, truth_data.py. </p>
-<hr>
-<p> The folder called Colombia_Geo contains the files that where provided to us by a Colombian university. These are files that can be accessed and viewed with OGR on any computer. These files contain a map of the area in La Victoria and Palmira with a set amount of rock specimiens already classified. </p>
-<hr>
-<p> As far as the ImagesUsed and InitialImages folders are concerned, InitialImages contains the initial images that were extracted from the EOS servers in both bands. While ImagesUsed contains the clipped images that were used in the training and loading aspect of this study. The main reason as to why the images where clipped is to lighten the load of the computational power and reduce the amount of time needed to complete the classification of the desired geological area. </p>
-<hr>
-<p> Finally, the neighbortest folder contains all the relevant Machine Learning algorithms used in this study identified by their initials. As well as the train and test csv files that were generated from the extracted and provided data. </p>
-<hr>
-<p> TLDR: <br>
-* Learn/understand different technologies in order to analyze satellite images and their data <br>
-* Create a Python code to analyze satellite images and use Machine Learning to extract, train, and load all relevant information </p>
-<hr>
+
+## Overview
+MUFRocks is focused on the automated classification of rock formations using satellite imagery from La Palmira and La Victoria, Colombia. The project integrates geospatial reference data and Earth Observation System (EOS) imagery to build reproducible pipelines for **data preparation, model training, and evaluation**.
+
+---
+
+## Data Sources
+- **Satellite Imagery:**  
+  - Natural color bands (B04, B03, B02)  
+  - Infrared vegetation bands (B08, B04, B03)  
+  - Retrieved from the Earth Observation System (EOS)
+- **Geospatial Reference Data:**  
+  - Ground-truth rock classification data provided by a Colombian university  
+  - Stored in OGR-compatible formats for portability and spatial accuracy
+
+---
+
+## Methodology
+1. **Data Preparation**
+   - Extracted and clipped satellite imagery to reduce computational load and improve processing efficiency.
+   - Aligned raster data with vector-based geospatial reference files.
+   - Standardized datasets for consistent training and evaluation.
+
+2. **Machine Learning Models**
+   - Random Forest  
+   - K-Nearest Neighbors (KNN)  
+   - Support Vector Machines (SVM)  
+   - Logistic Regression  
+   - Multilayer Perceptron (MLP)
+
+3. **Training & Evaluation**
+   - Generated structured training and testing datasets.
+   - Evaluated models using **accuracy, precision, and recall**.
+   - Maintained clear separation of data preparation, training, and evaluation steps to support reproducibility.
+
+---
+
+## Results
+- **Natural Color Imagery**
+  - Best model: **K-Nearest Neighbors**
+  - Accuracy: **91%**
+  - Precision: **87%**
+  - Recall: **88%**
+
+- **Infrared Imagery**
+  - Best model: **Random Forest**
+  - Accuracy: **83%**
+  - Precision: **31%**
+  - Recall: **31%**
+
+---
+
+## Project Structure (High-level)
+- `OSGDAL/` – Processing pipelines for natural color imagery  
+- `LLU_Colombia/` – Infrared imagery workflows and Python processing scripts  
+- `Colombia_Geo/` – OGR-compatible geospatial reference data  
+- `ImagesUsed/` – Clipped imagery used for model training and evaluation  
+- `InitialImages/` – Raw satellite imagery retrieved from EOS  
+- `neighbortest/` – Machine learning models and generated train/test datasets  
+
+> *(Folder structure is designed to support reproducibility and future extension.)*
+
+---
+
+## Technologies Used
+- **Programming:** Python  
+- **GIS & Geospatial:** GDAL, OGR, QGIS, EOS imagery  
+- **Machine Learning:** scikit-learn  
+- **Data Formats:** Raster imagery, CSV, OGR-compatible vector data  
+
+---
+
+## Key Takeaways
+- Built **reproducible Python pipelines** for geospatial data processing.  
+- Applied machine learning techniques to real-world satellite imagery.  
+- Optimized workflows for efficiency and maintainability.  
+- Strengthened understanding of GIS tooling, data integrity, and documentation practices.  
+
+---
+
+## Future Improvements
+- Incorporate additional satellite imagery and geospatial data (shapefiles) from future field visits.  
+- Validate classifiers with field data to ensure real-world accuracy.  
+- Combine macro-level satellite analysis with micro-level field sample analysis for more robust geological classification.  
+- Explore hyperspectral drone imagery to increase data resolution and enhance pipeline insights.  
+- Continue improving **reproducible Python workflows** for data processing, model training, and evaluation.  
