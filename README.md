@@ -63,7 +63,6 @@ MUFRocks is focused on the automated classification of rock formations using sat
 - `InitialImages/` – Raw satellite imagery retrieved from EOS  
 - `neighbortest/` – Machine learning models and generated train/test datasets  
 
-> *(Folder structure is designed to support reproducibility and future extension.)*
 
 ---
 
